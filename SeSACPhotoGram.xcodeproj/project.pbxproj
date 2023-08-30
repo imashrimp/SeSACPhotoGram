@@ -9,21 +9,86 @@
 /* Begin PBXBuildFile section */
 		17499E272A9C1F2E00936051 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17499E262A9C1F2E00936051 /* AppDelegate.swift */; };
 		17499E292A9C1F2E00936051 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17499E282A9C1F2E00936051 /* SceneDelegate.swift */; };
-		17499E2B2A9C1F2E00936051 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17499E2A2A9C1F2E00936051 /* ViewController.swift */; };
-		17499E2E2A9C1F2E00936051 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17499E2C2A9C1F2E00936051 /* Main.storyboard */; };
+		17499E2B2A9C1F2E00936051 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17499E2A2A9C1F2E00936051 /* AddViewController.swift */; };
 		17499E302A9C1F2F00936051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17499E2F2A9C1F2F00936051 /* Assets.xcassets */; };
 		17499E332A9C1F2F00936051 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17499E312A9C1F2F00936051 /* LaunchScreen.storyboard */; };
+		17499E3C2A9C1F4000936051 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 17499E3B2A9C1F4000936051 /* SnapKit */; };
+		17499E3F2A9C246000936051 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17499E3E2A9C246000936051 /* BaseViewController.swift */; };
+		17499E422A9C274A00936051 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17499E412A9C274A00936051 /* SearchViewController.swift */; };
+		17499E442A9C2EB300936051 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17499E432A9C2EB300936051 /* BaseView.swift */; };
+		17499E472A9C2FF200936051 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17499E462A9C2FF200936051 /* AddView.swift */; };
+		17499E492A9C338000936051 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17499E482A9C338000936051 /* SearchView.swift */; };
+		17499E4B2A9C366100936051 /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17499E4A2A9C366100936051 /* BaseCollectionViewCell.swift */; };
+		17499E4D2A9C37F100936051 /* SearchCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17499E4C2A9C37F100936051 /* SearchCollectionCell.swift */; };
+		17C1382E2A9D7BDD00D318B0 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C1382D2A9D7BDD00D318B0 /* Notification+Extension.swift */; };
+		17C138302A9D7C7900D318B0 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C1382F2A9D7C7900D318B0 /* DateView.swift */; };
+		17C138322A9D7DB500D318B0 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C138312A9D7DB500D318B0 /* DateViewController.swift */; };
+		17C138342A9D8E8F00D318B0 /* DateFormat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C138332A9D8E8F00D318B0 /* DateFormat+Extension.swift */; };
+		17C138692A9D9BBA00D318B0 /* SeSACFrameworkd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C138652A9D9B3600D318B0 /* SeSACFrameworkd.framework */; };
+		17C1386A2A9D9BBA00D318B0 /* SeSACFrameworkd.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17C138652A9D9B3600D318B0 /* SeSACFrameworkd.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17C1386F2A9DB54F00D318B0 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C1386E2A9DB54F00D318B0 /* TitleViewController.swift */; };
+		17C138712A9DBA9E00D318B0 /* TextViewButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C138702A9DBA9E00D318B0 /* TextViewButtonViewController.swift */; };
+		17C138732A9DC75400D318B0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C138722A9DC75400D318B0 /* WebViewController.swift */; };
+		17C138952A9EC7B100D318B0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C138942A9EC7B100D318B0 /* APIService.swift */; };
+		17C138992A9F61C800D318B0 /* URLSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C138982A9F61C800D318B0 /* URLSessionViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17C138642A9D9B3600D318B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C1385F2A9D9B3600D318B0 /* SeSACFrameworkd.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 17C1383F2A9D92F700D318B0;
+			remoteInfo = SeSACFrameworkd;
+		};
+		17C138662A9D9B3600D318B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C1385F2A9D9B3600D318B0 /* SeSACFrameworkd.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 17C138492A9D92F700D318B0;
+			remoteInfo = SeSACFrameworkdTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		17C1386B2A9D9BBA00D318B0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				17C1386A2A9D9BBA00D318B0 /* SeSACFrameworkd.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		17499E232A9C1F2E00936051 /* SeSACPhotoGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeSACPhotoGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17499E262A9C1F2E00936051 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17499E282A9C1F2E00936051 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		17499E2A2A9C1F2E00936051 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		17499E2D2A9C1F2E00936051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17499E2A2A9C1F2E00936051 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		17499E2F2A9C1F2F00936051 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17499E322A9C1F2F00936051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17499E342A9C1F2F00936051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17499E3E2A9C246000936051 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		17499E412A9C274A00936051 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		17499E432A9C2EB300936051 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		17499E462A9C2FF200936051 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		17499E482A9C338000936051 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		17499E4A2A9C366100936051 /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		17499E4C2A9C37F100936051 /* SearchCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionCell.swift; sourceTree = "<group>"; };
+		17C1382D2A9D7BDD00D318B0 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		17C1382F2A9D7C7900D318B0 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
+		17C138312A9D7DB500D318B0 /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		17C138332A9D8E8F00D318B0 /* DateFormat+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormat+Extension.swift"; sourceTree = "<group>"; };
+		17C1385F2A9D9B3600D318B0 /* SeSACFrameworkd.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SeSACFrameworkd.xcodeproj; path = SeSACFrameworkd/SeSACFrameworkd.xcodeproj; sourceTree = "<group>"; };
+		17C1386E2A9DB54F00D318B0 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		17C138702A9DBA9E00D318B0 /* TextViewButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewButtonViewController.swift; sourceTree = "<group>"; };
+		17C138722A9DC75400D318B0 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		17C138942A9EC7B100D318B0 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		17C138982A9F61C800D318B0 /* URLSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17C138692A9D9BBA00D318B0 /* SeSACFrameworkd.framework in Frameworks */,
+				17499E3C2A9C1F4000936051 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +107,10 @@
 		17499E1A2A9C1F2E00936051 = {
 			isa = PBXGroup;
 			children = (
+				17C1385F2A9D9B3600D318B0 /* SeSACFrameworkd.xcodeproj */,
 				17499E252A9C1F2E00936051 /* SeSACPhotoGram */,
 				17499E242A9C1F2E00936051 /* Products */,
+				17C138682A9D9BBA00D318B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +125,86 @@
 		17499E252A9C1F2E00936051 /* SeSACPhotoGram */ = {
 			isa = PBXGroup;
 			children = (
+				17C138932A9EC7A700D318B0 /* Network */,
+				17C1382C2A9D7BC300D318B0 /* Extension */,
+				17499E452A9C2FC500936051 /* Add */,
+				17499E402A9C272600936051 /* Search */,
+				17499E3D2A9C244000936051 /* Base */,
 				17499E262A9C1F2E00936051 /* AppDelegate.swift */,
 				17499E282A9C1F2E00936051 /* SceneDelegate.swift */,
-				17499E2A2A9C1F2E00936051 /* ViewController.swift */,
-				17499E2C2A9C1F2E00936051 /* Main.storyboard */,
 				17499E2F2A9C1F2F00936051 /* Assets.xcassets */,
 				17499E312A9C1F2F00936051 /* LaunchScreen.storyboard */,
 				17499E342A9C1F2F00936051 /* Info.plist */,
+				17C138722A9DC75400D318B0 /* WebViewController.swift */,
 			);
 			path = SeSACPhotoGram;
+			sourceTree = "<group>";
+		};
+		17499E3D2A9C244000936051 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				17499E3E2A9C246000936051 /* BaseViewController.swift */,
+				17499E432A9C2EB300936051 /* BaseView.swift */,
+				17499E4A2A9C366100936051 /* BaseCollectionViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		17499E402A9C272600936051 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				17499E412A9C274A00936051 /* SearchViewController.swift */,
+				17499E482A9C338000936051 /* SearchView.swift */,
+				17499E4C2A9C37F100936051 /* SearchCollectionCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		17499E452A9C2FC500936051 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				17499E2A2A9C1F2E00936051 /* AddViewController.swift */,
+				17499E462A9C2FF200936051 /* AddView.swift */,
+				17C1382F2A9D7C7900D318B0 /* DateView.swift */,
+				17C138312A9D7DB500D318B0 /* DateViewController.swift */,
+				17C1386E2A9DB54F00D318B0 /* TitleViewController.swift */,
+				17C138702A9DBA9E00D318B0 /* TextViewButtonViewController.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		17C1382C2A9D7BC300D318B0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				17C1382D2A9D7BDD00D318B0 /* Notification+Extension.swift */,
+				17C138332A9D8E8F00D318B0 /* DateFormat+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		17C138602A9D9B3600D318B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17C138652A9D9B3600D318B0 /* SeSACFrameworkd.framework */,
+				17C138672A9D9B3600D318B0 /* SeSACFrameworkdTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17C138682A9D9BBA00D318B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17C138932A9EC7A700D318B0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				17C138942A9EC7B100D318B0 /* APIService.swift */,
+				17C138982A9F61C800D318B0 /* URLSessionViewController.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,12 +217,16 @@
 				17499E1F2A9C1F2E00936051 /* Sources */,
 				17499E202A9C1F2E00936051 /* Frameworks */,
 				17499E212A9C1F2E00936051 /* Resources */,
+				17C1386B2A9D9BBA00D318B0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SeSACPhotoGram;
+			packageProductDependencies = (
+				17499E3B2A9C1F4000936051 /* SnapKit */,
+			);
 			productName = SeSACPhotoGram;
 			productReference = 17499E232A9C1F2E00936051 /* SeSACPhotoGram.app */;
 			productType = "com.apple.product-type.application";
@@ -111,14 +255,40 @@
 				Base,
 			);
 			mainGroup = 17499E1A2A9C1F2E00936051;
+			packageReferences = (
+				17499E3A2A9C1F4000936051 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 17499E242A9C1F2E00936051 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 17C138602A9D9B3600D318B0 /* Products */;
+					ProjectRef = 17C1385F2A9D9B3600D318B0 /* SeSACFrameworkd.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				17499E222A9C1F2E00936051 /* SeSACPhotoGram */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		17C138652A9D9B3600D318B0 /* SeSACFrameworkd.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SeSACFrameworkd.framework;
+			remoteRef = 17C138642A9D9B3600D318B0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		17C138672A9D9B3600D318B0 /* SeSACFrameworkdTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SeSACFrameworkdTests.xctest;
+			remoteRef = 17C138662A9D9B3600D318B0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		17499E212A9C1F2E00936051 /* Resources */ = {
@@ -127,7 +297,6 @@
 			files = (
 				17499E332A9C1F2F00936051 /* LaunchScreen.storyboard in Resources */,
 				17499E302A9C1F2F00936051 /* Assets.xcassets in Resources */,
-				17499E2E2A9C1F2E00936051 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +307,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17499E2B2A9C1F2E00936051 /* ViewController.swift in Sources */,
+				17C1382E2A9D7BDD00D318B0 /* Notification+Extension.swift in Sources */,
+				17499E472A9C2FF200936051 /* AddView.swift in Sources */,
+				17499E422A9C274A00936051 /* SearchViewController.swift in Sources */,
+				17499E4B2A9C366100936051 /* BaseCollectionViewCell.swift in Sources */,
+				17C138342A9D8E8F00D318B0 /* DateFormat+Extension.swift in Sources */,
+				17499E2B2A9C1F2E00936051 /* AddViewController.swift in Sources */,
+				17C138322A9D7DB500D318B0 /* DateViewController.swift in Sources */,
+				17499E3F2A9C246000936051 /* BaseViewController.swift in Sources */,
+				17C138712A9DBA9E00D318B0 /* TextViewButtonViewController.swift in Sources */,
+				17C138302A9D7C7900D318B0 /* DateView.swift in Sources */,
+				17C138992A9F61C800D318B0 /* URLSessionViewController.swift in Sources */,
+				17499E492A9C338000936051 /* SearchView.swift in Sources */,
+				17499E442A9C2EB300936051 /* BaseView.swift in Sources */,
+				17C138732A9DC75400D318B0 /* WebViewController.swift in Sources */,
 				17499E272A9C1F2E00936051 /* AppDelegate.swift in Sources */,
 				17499E292A9C1F2E00936051 /* SceneDelegate.swift in Sources */,
+				17499E4D2A9C37F100936051 /* SearchCollectionCell.swift in Sources */,
+				17C138952A9EC7B100D318B0 /* APIService.swift in Sources */,
+				17C1386F2A9DB54F00D318B0 /* TitleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		17499E2C2A9C1F2E00936051 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				17499E2D2A9C1F2E00936051 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		17499E312A9C1F2F00936051 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +469,6 @@
 				INFOPLIST_FILE = SeSACPhotoGram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +496,6 @@
 				INFOPLIST_FILE = SeSACPhotoGram/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -358,6 +533,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		17499E3A2A9C1F4000936051 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		17499E3B2A9C1F4000936051 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17499E3A2A9C1F4000936051 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 17499E1B2A9C1F2E00936051 /* Project object */;
 }
