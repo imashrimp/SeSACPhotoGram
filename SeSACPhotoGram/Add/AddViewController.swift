@@ -7,6 +7,7 @@
 
 import UIKit
 import SeSACFrameworkd
+import PhotosUI
 
 //Protocol 값 전달 2.
 protocol PassDataDelegate {
@@ -22,6 +23,8 @@ class AddViewController: BaseViewController {
     
     let mainView = AddView()
     
+    
+    
     //viewDidLoad보다 먼저 호출 됨. 루트뷰가 준비되는 시점.
     //super 메서드 호출X => super메서드가 호출되면 apple이 만든 기본 UIView가 생성되기 때문에
     override func loadView() {
@@ -31,7 +34,7 @@ class AddViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         NotificationCenter.default.addObserver(self, selector: #selector(selectImageNotificationObserver), name: .selectImage, object: nil)
         
         APIService.shared.callRequest()
@@ -55,11 +58,11 @@ class AddViewController: BaseViewController {
         super.configureView()
         
         mainView.searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
-
+        
         mainView.searchProtocolButton.addTarget(self, action: #selector(searchProtocolButtonTapped), for: .touchUpInside)
         
         mainView.dateButton.addTarget(self, action: #selector(dateButtonTapped), for: .touchUpInside)
-
+        
         mainView.titleButton.addTarget(self, action: #selector(titleButtontapped), for: .touchUpInside)
         
         mainView.textViewButton.addTarget(self, action: #selector(textViewButtonTapped), for: .touchUpInside)
@@ -92,7 +95,7 @@ class AddViewController: BaseViewController {
         
         let vc = DateViewController()
         vc.delegate = self
-
+        
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -100,13 +103,13 @@ class AddViewController: BaseViewController {
         
         let vc = SearchViewController()
         vc.delegate = self
-
+        
         present(vc, animated: true)
     }
     
-//    override func setConstraints() { //제약조건
-//        super.setConstraints()
-//    }
+    //    override func setConstraints() { //제약조건
+    //        super.setConstraints()
+    //    }
     
     @objc func searchButtonTapped() {
         
@@ -114,15 +117,49 @@ class AddViewController: BaseViewController {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         let getFromGallery = UIAlertAction(title: "갤러리에서 가져오기", style: .default) { gallery in
-            //MARK: - 갤러리 띄우고 이미지 선택하면 addVC의 imageView에 해당 이미지 띄우기
+
+            var config = PHPickerConfiguration()
+            config.filter = .any(of: [.images])
+            
+            let phpicker = PHPickerViewController(configuration: config)
+            phpicker.delegate = self
+            self.present(phpicker, animated: true)
+            
         }
         let searchOnWeb = UIAlertAction(title: "웹에서 검색하기", style: .default) { webResPonse in
             //MARK: - API 네트워킹 요청 이후에 뭘 하라는 건지 정확하게 모르겠음.
+            print("이건 뭐 하라는 거야?")
         }
         let cancel = UIAlertAction(title: "취소", style: .cancel)
         
+        actionSheet.addAction(getFromGallery)
+        actionSheet.addAction(searchOnWeb)
+        actionSheet.addAction(cancel)
+        
         present(actionSheet, animated: true)
     }
+    
+}
+
+extension AddViewController: PHPickerViewControllerDelegate {
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        
+        picker.dismiss(animated: true)
+        
+        let itemProvider = results.first?.itemProvider
+        
+        if let itemProvider = itemProvider,
+           itemProvider.canLoadObject(ofClass: UIImage.self) {
+            itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in
+                DispatchQueue.main.async {
+                    self.mainView.photoImageView.image = image as? UIImage
+                }
+            }
+        } else {
+            print("사진을 가져오지 못 했습니다.")
+        }
+    }
+    
     
 }
 
@@ -140,3 +177,4 @@ extension AddViewController: ImageDelegate {
         mainView.photoImageView.image = data
     }
 }
+
